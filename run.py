@@ -33,6 +33,7 @@ logging.basicConfig(
     datefmt = "%Y-%m-%d %H:%M:%S"
 )
 
+
 app = create_app()
 
 if __name__ == "__main__":
@@ -42,3 +43,8 @@ if __name__ == "__main__":
         port  = port,
         debug = Config.DEBUG
     )
+
+
+@app.route("/")
+def home():
+    return "PromptGenie Backend is Running 🚀"
